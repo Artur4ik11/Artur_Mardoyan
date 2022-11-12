@@ -1,0 +1,8 @@
+@import url(screen.css);
+@import url(Print.css);
+h1{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 50px;
+    background-color: rgb(36, 202, 41);
+    text-align: center;
+}
