@@ -10,21 +10,18 @@
             <fieldset>
                 <legend>Личные данные</legend>
                 <legend><input type="text"
-                               pattern="[А-Яа-яЁё]"
-                               maxlength="25"
+                               pattern="[А-Яа-яЁё]{1,25}"
                                name="Last_name"
                                placeholder="Фамилия" 
                                required 
                                autofocus></legend>
                 <legend><input type="text" 
-                               pattern="[А-Яа-яЁё]" 
-                               maxlength="20" 
+                               pattern="[А-Яа-яЁё]{1,20}" 
                                name="Name" 
                                placeholder="Имя" 
                                required></legend>
                 <legend><input type="text" 
-                               pattern="[А-Яа-яЁё]" 
-                               maxlength="24" 
+                               pattern="[А-Яа-яЁё]{1,24}"  
                                name="Middle_name" 
                                placeholder="Отчество" 
                                required></legend>
@@ -75,20 +72,101 @@
                                            step="1">
                             </legend>
                         </fieldset>
-                <legend><select name="Nation">
-                                <option value="Belarus">Беларусь</option>
-                                <option value="Russia">Россия</option>
-                                <option value="Armenia">Армения</option>
-                                <option value="Moldova">Молдова</option>
-                                <option value="Poland">Польша</option>
-                                <option value="USA">США</option>
-                                <option value="Kazakhstan">Казахстан</option>
-                </select></legend>
-                <label for="#address">Адрес:</label>
-                <legend><textarea name="Address" id="address" cols="20" rows="3"></textarea>
-
-                </legend>    
-            </fieldset>   
+                            <legend><select name="Nation">
+                                    <option value="Belarus">Беларусь</option>
+                                    <option value="Russia">Россия</option>
+                                    <option value="Armenia">Армения</option>
+                                    <option value="Moldova">Молдова</option>
+                                    <option value="Poland">Польша</option>
+                                    <option value="USA">США</option>
+                                    <option value="Kazakhstan">Казахстан</option>
+                            </select></legend>
+                            <label for="#address">Адрес:</label>
+                            <legend><textarea name="Address" 
+                                  id="address" 
+                                  cols="20" 
+                                  rows="3">
+                            </textarea></legend>    
+            </fieldset>  
+            <fieldset>
+                <legend>Интересы</legend>
+                <fieldset>
+                    <legend>Хобби</legend>
+                    <label><input type="checkbox" 
+                                  name="hobby[]" 
+                                  value="Fishing">Рыбалка</label> <br>
+                    <label><input type="checkbox" 
+                                  name="hobby[]" 
+                                  value="Astronomy">Астрономия</label> <br>
+                    <label><input type="checkbox" 
+                                  name="hobby[]" 
+                                  value="Diving">Дайвинг</label> <br>
+                    <label><input type="checkbox"
+                                  name="hobby[]"
+                                  value="Collecting">Коллекционирование</label> <br>
+                </fieldset>
+                <fieldset>
+                    <legend>Домашние животные(возможность выбрать несколько вариантов)</legend>
+                    <select name="Home_animals" multiple size="12" >
+                        <optgroup label="Собаки">
+                            <option value="Labrador">Лабрадор</option>
+                            <option value="Sheepdog">Овчарка</option>
+                            <option value="Maltese">Мальтийская болонка</option>
+                        </optgroup>
+                        <optgroup label="Коты">
+                            <option value="Siamse">Сиамский</option>
+                            <option value="Persian">Персидский</option>
+                            <option value="Mein_Coon">Мейн-Кун</option>
+                        </optgroup>
+                        <optgroup label="Грызуны">
+                            <option value="Hamster">Хомяк</option>
+                            <option value="Rat">Крыса</option>
+                            <option value="Cavy">Морская свинка</option>
+                        </optgroup>
+                    </select>
+                </fieldset>
+            </fieldset>
+            <fieldset>
+                <legend>Данные для входа и восстановления пароля</legend> 
+                <!-- Только сейчас я понял,что чтобы перенести поле формы на следующую строку,можно использовать br,а не legend :(  -->
+                <!-- И вообще можно ли так пользоваться legend? -->
+                <input type="text" 
+                       name="login" 
+                       pattern="[a-zA-Z0-9]{5,20}" 
+                       required
+                       placeholder="Логин"> <br>
+                <input type="text" 
+                       name="password" 
+                       pattern="[a-zA-Z0-9]{10,20}" 
+                       required 
+                       autocomplete="off"
+                       placeholder="Пароль">
+            </fieldset>
+            <fieldset>
+                <legend>Координаты</legend>
+                <input type="email"
+                       name="email"
+                       placeholder="Введите адрес почты"> <br>
+                <input type="url" 
+                       name="url" 
+                       placeholder="введите адрес сайта"> <br>
+            </fieldset>
+            <fieldset>
+                <legend>Цифры</legend>
+                <input type="number" 
+                       min="-2.5" 
+                       max="2.5" 
+                       step="0.1"> <br>
+                <input type="range" 
+                       min="1" 
+                       max="10"> <br>
+            </fieldset>
+            <fieldset>
+                <legend>Кнопки управления</legend>
+                <input type="submit" value="Отправить">
+                <input type="reset" value="Сбросить"> <br>
+                <img src="Без названия (1).jfif" alt="img">
+            </fieldset>
         </form>
 </body>
 </html>
