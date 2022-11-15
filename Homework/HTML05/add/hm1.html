@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Заполните анкету</h1>
+        <form action="http://fe.it-academy.by/TestForm.php" method="post">
+            <fieldset>
+                <legend>Личные данные</legend>
+                <legend><input type="text"
+                               pattern="[А-Яа-яЁё]"
+                               maxlength="25"
+                               name="Last_name"
+                               placeholder="Фамилия" 
+                               required 
+                               autofocus></legend>
+                <legend><input type="text" 
+                               pattern="[А-Яа-яЁё]" 
+                               maxlength="20" 
+                               name="Name" 
+                               placeholder="Имя" 
+                               required></legend>
+                <legend><input type="text" 
+                               pattern="[А-Яа-яЁё]" 
+                               maxlength="24" 
+                               name="Middle_name" 
+                               placeholder="Отчество" 
+                               required></legend>
+                        <fieldset>
+                            <legend>Паспортные данные</legend>
+                            <input type="text" 
+                                   name="series" 
+                                   placeholder="AA" 
+                                   pattern="[A-Z]{2}" 
+                                   minlength="2" 
+                                   maxlength="2" 
+                                   required 
+                                   style="width: 20px;">
+                            <input type="text" 
+                                   name="numb_pass" 
+                                   placeholder="1234567" 
+                                   pattern="[0-9]{7}" 
+                                   minlength="7" 
+                                   maxlength="7" 
+                                   required 
+                                   style="width: 55px;">
+                        </fieldset>
+                        <fieldset>
+                            <legend>Дата рождения</legend>
+                            <legend><input type="text"
+                                           name="Year"
+                                           pattern="[0-9]{4}"
+                                           maxlength="4"
+                                           minlength="4"
+                                           style="width: 35px;"
+                                           placeholder="2000"></legend>
+                            <legend><select name="Mounth" required>
+                                           <option value="January">Январь</option>
+                                           <option value="February">Февраль</option>
+                                           <option value="March">Март</option>
+                                           <option value="April">Апрель</option>
+                                           <option value="May">Май</option>
+                                           <option value="June">Июнь</option>
+                                           <option value="July">Июль</option>
+                                           <option value="August">Август</option>
+                                           <option value="September">Сентябрь</option>
+                                           <option value="November">Ноябрь</option>
+                                           <option value="December">Декабрь</option>
+                            </select></legend>
+                            <legend><input type="number"
+                                           min="0" 
+                                           max="31"
+                                           step="1">
+                            </legend>
+                        </fieldset>
+                <legend><select name="Nation">
+                                <option value="Belarus">Беларусь</option>
+                                <option value="Russia">Россия</option>
+                                <option value="Armenia">Армения</option>
+                                <option value="Moldova">Молдова</option>
+                                <option value="Poland">Польша</option>
+                                <option value="USA">США</option>
+                                <option value="Kazakhstan">Казахстан</option>
+                </select></legend>
+                <label for="#address">Адрес:</label>
+                <legend><textarea name="Address" id="address" cols="20" rows="3"></textarea>
+
+                </legend>    
+            </fieldset>   
+        </form>
+</body>
+</html>
