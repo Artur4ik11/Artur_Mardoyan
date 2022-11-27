@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        .cont{
+            display: flex;
+            background-color: rgb(199, 201, 201);
+        }
+        .nav{
+            width: 15em;
+            background-color: rgb(183, 181, 181);
+            height: fit-content;
+        }
+        .st{
+            width: 100%;
+            flex-direction: row;
+        }
+        .s1{
+            width: 100%;
+            background-color:rgb(144, 142, 142);
+            margin-bottom: 0.2em;
+            width: 100%;
+        }
+        .img{
+            position: relative;
+            right: -90%;
+        }
+        .bottom{
+            background-color: rgb(199, 201, 201);
+            width: 100%;
+            display: flex;
+            margin-top: 5px;
+            padding-left: 2px;
+        }
+    </style>
+</head>
+<body>
+    <div class="cont">
+        <div class="nav">
+            <ul style="position:relative; left: -21px;">
+                <li><b>Меню навигации:</b></li>
+                <ul>
+                    <li>Ширина 15 em</li>
+                    <li>Должен присутствовать цвет фона</li>
+                    <li>Распологаться слева</li>
+                    <li>Блок навигации наполните контентом дотаточным, чтобы по высоте он начинал захватывать вторую статью, как показано в данном примере</li>
+                </ul>
+            </ul>
+        </div>
+            <div class="st">
+                <div class="s1" style="margin-bottom: 0.2em;">
+                    <h3>Статья 1</h3> <br>
+                    <p>Размер блока: <br>
+                    Занимает всю доступную ширину <br>
+                    Должен присутствовать цвет фона <br>
+                    Во всех "статьях" сделайте отступ сниху от соседей равным .2em,при помощи свойства margin- <br>
+                    bottom
+                    </p>
+                </div>
+                <div class="s1" style="margin: 0;">
+                    <h3>Статья 2</h3>
+                    <p>Размер блока: <br>
+                        Занимает всю доступную ширину <br>
+                        Должен присутствовать цвет фона <br>
+                        Во всех "статьях" сделайте отступ сниху от соседей равным .2em,при помощи свойства margin- <br>
+                        bottom. Картинка вставлена при помощи тега,плавание организовано по правому краю внутри <br>
+                        данной статьи для этой картинки.
+                    </p>
+                    <img class="img" src="svg (2).svg" alt="img">
+                </div>
+            </div>
+    </div>
+    <div class="bottom">
+        Нижний блок,подвал.Занимает всю доступную ширину.Высота определяется помещенным внутрь контентом.
+    </div>
+</body>
+</html>
