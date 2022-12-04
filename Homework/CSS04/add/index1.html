@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            margin-left: 3px;
+        }
+        div:not(.bottom){
+            border: 1px solid black;
+            border-radius: 0px 20px 0px 20px;
+            width: 643px;
+            padding-bottom: 14px;
+            text-indent: 15px;
+        } 
+        /* before and after */
+        a[href$='.doc']::before{
+            content: url(img/Стрелка.png);
+        }
+        a[href$='.txt']::after{
+            content: url(img/word.jfif);
+        }
+        a[href$='.jpg']::after{
+            content: url(img/adobe.png);
+        }
+        a[href$='img']::after{
+            content: url(img/папки.gif); 
+        }
+        a[href^='aaa1']::before{
+            content: url(img/лист.jfif);
+        }
+        a[href^='fafa1']::before{
+            content: url(img/лист.jfif);
+        }
+        a[href^='afaf1']::before{
+            content: url(img/лист.jfif);
+        }
+        /* Всплывающие картинки */
+        a[href='aaa1.txt']::after{
+            content:url(img/word.jfif);
+            opacity: 1;
+        }
+        a[href='fafa1.jpg']::after{
+            content: url(img/adobe.png);
+            opacity: 1;
+        }
+        a[href='afaf1.img']::after{
+            content: url(img/папки.gif);
+            opacity: 1;
+        }
+        /* Как сделать при наведении всплывающими???*/
+    </style>
+</head>
+<body>
+    <h1>Форматы файлов.</h1>
+    <br>
+        <div class="first">
+            <p> 
+                .DOC или .doc (от англ. <a href="adadad.doc">document</a> ) - расширение имени файла,используемое для файлов, <br>
+                представляющих текст, с разметкой или без. Расширение .DOC часто использовалось для <br>
+                обозначения простых текстовых файлов без формирования, однако позже стало <br>
+                использоваться  для двоичных форматов с разметкой <br>
+                <a href="aaaa.txt">Документ MS WORD</a>
+            </p>
+        </div>
+        <div class="second">
+            <p>
+               Portable Document Format ( <a href="adadad.doc">PDF</a>) - межплатформенный формат электронных документов,<br>
+               разработанный фирмой Adobe Systems с использованием ряда возможностей языка<br>
+               Postscript. <br>
+               <a href="fafa.jpg">Документ PDF</a> 
+            </p>
+        </div>
+        <div class="third">
+            <p>
+                ZIP-популярный формат сжатия данных и архивации файлов. Файл в этом формате <br>
+                обычно имеет расширение<a href="adadad.doc">.zip</a> и хранит в сжатом или несжатом виде один или несколько <br>
+                файлов, которое можно из него извлечь путем распаковки с помощью специальной <br>
+                программы. <br>
+                <a href="afaf.img">Архив</a>
+            </p>
+        </div> <br>
+        <h2>Это список файлов</h2>
+        <br>
+        <div class="bottom">
+            <span>
+                <a href="aaa1.txt">Документ MS WORD</a> <br>
+            </span>
+            <span>
+                <a href="fafa1.jpg">Документ PDF</a><br>
+            </span>
+            <span>
+                <a href="afaf1.img">Архив</a> 
+            </span>    
+        </div>
+        
+</body>
+</html>
